@@ -15,8 +15,10 @@
 ### Démarrer
 
 1. Téléchargez le dossier depuis le repo
-2. ouvrez le dossier dans cmd tapez la commande npm i
-3. puis npm star pour l'exécuter
+2. Ouvrez le dossier dans cmd tapez la commande npm i
+3. Puis npm star pour l'exécuter
+
+NB : assurez-vous que NodeJs et NPM sont bien installés sur votre machine.
 
 ### Screenshot
 ![](https://github.com/NazimAitali/releasin-test-app-front/blob/master/Screenshot-Desktop.png)
