@@ -19,15 +19,14 @@
 3. puis npm star pour l'exécuter
 
 ### Screenshot
-
-![](https://github.com/NazimAitali/static-job-listings-master-solution/blob/master/Screenshot-Desktop.png)
-![](https://github.com/NazimAitali/static-job-listings-master-solution/blob/master/Screenshot-Mobile.png)
-![](https://github.com/NazimAitali/static-job-listings-master-solution/blob/master/Screenshot-Mobile-v2.png)
+![](https://github.com/NazimAitali/releasin-test-app-front/blob/master/Screenshot-Desktop.png)
+![](https://github.com/NazimAitali/releasin-test-app-front/blob/master/Screenshot-Mobile.png)
+![](https://github.com/NazimAitali/releasin-test-app-front/blob/master/Screenshot-Mobile-v2.png)
 
 ### liens
 
-Lien GitRepo : https://github.com/NazimAitali/releasin-test-app-front.git
-Lien live : https://releasin-test-app.netlify.app/
+- Solution URL:  https://github.com/NazimAitali/releasin-test-app-front.git
+- Live Site URL: https://releasin-test-app.netlify.app/
 
 ## Démarche
 
@@ -35,8 +34,8 @@ Lien live : https://releasin-test-app.netlify.app/
 
 - [React](https://reactjs.org/) - JS library
 - [SASS](https://sass-lang.com/) - CSS pre-processor
+- -Axios
 - Flex Box
-- JSX
 - Mobile First Approach
 
 ## Auteur
