@@ -1,0 +1,75 @@
+@import "./function.scss";
+
+@mixin ElementParameters($w, $h, $flex, $justify, $align, $direction) {
+  width: $w;
+  height: $h;
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin dimension($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin flex($flex, $justify, $align, $direction) {
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin grid-display($grid, $column, $row) {
+  display: $grid;
+  grid-template-columns: $column;
+  grid-template-rows: $row;
+}
+@mixin grid-position($justify, $align) {
+  justify-self: $justify;
+  align-self: $align;
+}
+@mixin grid($col-start, $col-end, $row-start, $row-end) {
+  grid-column-start: $col-start;
+  grid-column-end: $col-end;
+  grid-row-start: $row-start;
+  grid-row-end: $row-end;
+}
+@mixin back($color, $img, $repeat, $positionX, $positionY, $size) {
+  background-color: $color;
+  background-image: $img;
+  background-repeat: $repeat;
+  background-position-x: $positionX;
+  background-position-y: $positionY;
+  background-size: $size;
+}
+@mixin radius($px) {
+  border-radius: $px;
+}
+@mixin position($top, $bottom, $left, $right, $unit) {
+  top: convert-unit($top, $unit);
+  bottom: convert-unit($bottom, $unit);
+  left: convert-unit($left, $unit);
+  right: convert-unit($right, $unit);
+}
+@mixin radialBack($base, $neutral, $primary) {
+  background: radial-gradient(
+    circle,
+    $base 0%,
+    $base 52%,
+    $neutral 55%,
+    $neutral 60%,
+    $primary 84%
+  );
+}
+@mixin winAnimation($time, $delay, $width, $height) {
+  animation: anime $time $delay ease-out;
+  @keyframes anime {
+    0% {
+      width: 0%;
+      height: 0%;
+    }
+    100% {
+      width: $width;
+      height: $height;
+    }
+  }
+}

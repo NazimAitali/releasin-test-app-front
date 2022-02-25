@@ -1,0 +1,82 @@
+@import "../../styles/libs/mixin.scss";
+@import "../../styles/libs/variables.scss";
+.Add-panel {
+  @include ElementParameters(100%, 100%, flex, center, center, row);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: show 0.5s 0.2s forwards;
+  background: rgba($White, 0.9);
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Overlay {
+  @include ElementParameters(100%, 100%, flex, center, center, row);
+  position: absolute;
+}
+.Add {
+  @include ElementParameters(90%, 80%, flex, flex-start, center, column);
+  background-color: $White;
+  box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  z-index: 99;
+  border-bottom: 0.3em solid $Green-primary;
+  border-top: 0.3em solid $Green-primary;
+}
+.Add-container {
+  @include ElementParameters(80%, 90%, flex, flex-start, center, column);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #d1d1d1 rgb(231, 231, 231);
+  scrollbar-width: thin;
+}
+
+.items {
+  width: 90%;
+  p {
+    margin: 0.1em;
+  }
+  .item {
+    @include ElementParameters(100%, 4em, flex, center, flex-start, column);
+    input {
+      width: 80%;
+      padding: 1em;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .Add-btn {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .Next-btn {
+    justify-content: flex-end;
+  }
+  .Select-attribute-value {
+    @include ElementParameters(100%, 6em, flex, flex-start, center, row);
+  }
+}
+
+.Cancel {
+  &:hover {
+    background-color: rgba($Danger, 1);
+  }
+}
+
+@media (min-width: $Tab) {
+  .Add {
+    width: 50%;
+  }
+  .Add-container {
+    width: 70%;
+  }
+}

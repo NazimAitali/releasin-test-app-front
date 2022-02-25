@@ -1,0 +1,37 @@
+@import "../../styles/libs/mixin.scss";
+@import "../../styles/libs/variables.scss";
+
+.List {
+  @include ElementParameters(100%, 85%, flex, center, center, column);
+  max-width: 1440px;
+}
+.Add-btn {
+  @include ElementParameters(90%, 10%, flex, center, flex-end, column);
+}
+.Add-btn-content {
+  @include ElementParameters(37%, 50%, flex, space-evenly, center, row);
+  outline: none;
+  background: #333;
+  border: none;
+  color: #eee;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  p {
+    margin: 0;
+  }
+  &:hover {
+    background-color: rgba($Green-primary-very, 1);
+  }
+}
+@media (min-width: $Tab) {
+  .Add-btn {
+    height: 15%;
+  }
+  .Add-btn-content {
+    width: 15%;
+  }
+  .Btn-add-panel {
+    width: 25%;
+  }
+}

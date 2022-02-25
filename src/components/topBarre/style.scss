@@ -1,0 +1,16 @@
+@import "../../styles/libs/mixin.scss";
+@import "../../styles/libs/variables.scss";
+
+.Top-barre {
+  @include ElementParameters(100%, 15%, flex, center, center, row);
+  background-color: $White;
+  -webkit-box-shadow: 0px 4px 0px 1px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 4px 0px 1px rgba(0, 0, 0, 0.14);
+}
+.Logo {
+  @include ElementParameters(80%, 100%, flex, center, center, row);
+  img {
+    width: 50%;
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../styles/libs/mixin.scss";
+@import "../../styles/libs/variables.scss";
+.Modify-panel {
+  @include ElementParameters(85%, 170%, flex, center, center, column);
+  background-color: $White;
+  box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  z-index: 99;
+  position: absolute;
+  top: 80%;
+}

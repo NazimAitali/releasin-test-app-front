@@ -1,0 +1,104 @@
+@import "../../styles/libs/mixin.scss";
+@import "../../styles/libs/variables.scss";
+
+.list-table {
+  @include dimension(90%, 90%);
+  border-collapse: collapse;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: $Green-neutral $Gray;
+  scrollbar-width: thin;
+}
+.table-container {
+  width: 100%;
+}
+.tr-column {
+  justify-content: space-around;
+  width: 100%;
+  text-align: left;
+}
+th,
+td {
+  padding: 12px 8px;
+  flex: 1;
+  text-align: unset;
+}
+.selectable {
+  cursor: pointer;
+  &:hover {
+    color: $Green-primary;
+  }
+}
+.t-head {
+  width: 100%;
+  height: 8%;
+}
+
+.tbody {
+  width: 100%;
+  height: 92%;
+  justify-content: flex-start;
+  overflow: auto;
+  position: relative;
+  top: 0%;
+}
+
+.tr-row {
+  width: 100%;
+  height: 9%;
+  justify-content: space-between;
+  border-bottom: 1px solid $Gray;
+  position: relative;
+  top: 1px;
+  -webkit-box-shadow: 0px 0px 9px -3px $Gray;
+  box-shadow: 0px 0px 9px -3px $Gray;
+}
+
+.tbody .tr-row:nth-of-type(even) {
+  background-color: rgba($Green-neutral-clear, 0.3);
+}
+
+.tbody .tr-row:last-of-type {
+  border-bottom: 2px solid $Green-primary-very;
+}
+
+.tbody .tr-row:hover {
+  background-color: rgba($Green-primary-clear, 0.1);
+  box-shadow: none;
+}
+.Delete-confirmation {
+  text-align: center;
+  font-size: 1.4em;
+  cursor: pointer;
+  &:hover {
+    color: $Danger;
+  }
+}
+.No-data {
+  @include ElementParameters(100%, 100%, flex, center, center, row);
+  position: absolute;
+  top: 13em;
+}
+.react-confirm-alert-body {
+  font-family: $Roboto !important;
+}
+.react-confirm-alert-overlay {
+  @include ElementParameters(100%, 100%, flex, center, center, row);
+}
+.react-confirm-alert {
+  @include ElementParameters(80%, 30%, flex, center, center, row);
+}
+.react-confirm-alert-body h1 {
+  font-size: 1.5em;
+}
+.react-confirm-alert-button-group button:hover {
+  background-color: rgba($Green-primary, 1);
+}
+.react-confirm-alert-button-group > button:nth-child(2):hover {
+  background-color: rgba($Danger, 1);
+}
+@media (min-width: $Tab) {
+  .list-table {
+    height: 85%;
+  }
+}

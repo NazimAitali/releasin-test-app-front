@@ -1,0 +1,44 @@
+@import "../../styles/libs/mixin.scss";
+@import "../../styles/libs/variables.scss";
+
+.Product-display {
+  @include ElementParameters(100%, 100%, flex, center, center, row);
+  font-size: 1.5em;
+}
+.Item-product {
+  @include ElementParameters(100%, 25%, flex, center, center, row);
+  position: relative;
+}
+.Product-detail {
+  @include ElementParameters(100%, 100%, flex, center, center, column);
+}
+.Product-type {
+  @include ElementParameters(90%, 50%, flex, center, center, column);
+}
+.Assigned-attributes {
+  @extend .Product-type;
+}
+.Border {
+  border-bottom: 0.2em solid $Green-primary-very;
+}
+.Modif-btn:hover {
+  color: $Green-primary;
+  cursor: pointer;
+}
+@media (min-width: $Tab) {
+  .Product-display {
+    font-size: 1em;
+  }
+  .Product-detail {
+    flex-direction: row;
+  }
+  .Product-type,
+  .Assigned-attributes {
+    width: 50%;
+    height: 90%;
+  }
+  .Border {
+    border-bottom: none;
+    border-right: 0.2em solid $Green-primary-very;
+  }
+}

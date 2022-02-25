@@ -1,0 +1,14 @@
+@import "./styles/libs/variables.scss";
+@import "./styles/libs/mixin.scss";
+
+.App {
+  @include ElementParameters(100vw, 100vh, flex, center, center, column);
+  background-color: whitesmoke;
+  font-size: 0.65em;
+  font-family: $Roboto;
+}
+@media (min-width: $Tab) {
+  .App {
+    font-size: 1.1em;
+  }
+}
